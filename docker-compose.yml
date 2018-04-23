@@ -1,10 +1,12 @@
 version: '2'
-
 services:
-  mysql:
-    build: mysql
-    restart: always
-    environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD:yes
-    ports:
-      - 3306:3306
+        mysql:
+                build: mysql
+                restart: always
+                environment:
+                        - "MYSQL_ALLOW_EMPTY_PASSWORD=yes"
+                ports:
+                        - 3306:3306
+                volumes:
+                        - /opt/volumes/mysql:/var/lib/mysql
+
