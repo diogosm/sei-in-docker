@@ -5,8 +5,10 @@ set -e
 rm -rf /var/lib/mysql/*
 chown -R mysql:mysql /var/lib/mysql
 mysql_install_db --user=mysql --datadir="/var/lib/mysql" --rpm
+sleep 15
 
 mysqld_safe /usr/bin/mysqld_safe --bind-address=0.0.0.0
+sleep 15
 
 # Criação dos bancos de dados do sistema
 mysqladmin create sip
