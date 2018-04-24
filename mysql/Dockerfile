@@ -9,5 +9,3 @@ COPY sei_3_0_0_BD_Ref_Exec.sql /tmp/
 COPY install.sh /docker-entrypoint-initdb.d/install.sh
 
 RUN chmod a+x /docker-entrypoint-initdb.d/install.sh
-
-

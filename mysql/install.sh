@@ -2,21 +2,7 @@
 
 set -e
 
-#rm -rf /var/lib/mysql/*
-#chown -R mysql:mysql /var/lib/mysql
-#mysql_install_db --user=mysql --datadir="/var/lib/mysql" --rpm
-
-#mysqld_safe /usr/bin/mysqld_safe --bind-address=0.0.0.0
-#mysql_install_db --user=root --datadir="/var/lib/mysql" --rpm
-#mysql_install_db --user=mysql --datadir="/var/lib/mysql" --rpm
-
-#/etc/init.d/mysql start
-
-# Criação dos bancos de dados do sistema
-#mysqladmin create sip
-#mysqladmin create sei
-
-## base já existe
+## verifico se base já existe (volume persistente)
 DBNAME="sip"
 DBEXISTS=$(mysql --batch --skip-column-names -e "SHOW DATABASES LIKE '"$DBNAME"';" | grep "$DBNAME" > /dev/null; echo "$?")
 
