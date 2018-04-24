@@ -4,7 +4,6 @@ Alternativa a versão do MPOG [sei-vagrant](https://softwarepublico.gov.br/gitla
 
 ## @TODO things
 
-```diff
 - [ ] Testar eficácia do dockerfile usando mariadb.
 - [ ] Criar variável de ambiente para atualizar parâmetros de url no banco de dados para. Ex.: padronizar variáveis escritas no docker compose ou dockerfile;
 - [ ] Criar variáveis de: SIGLA_ORGAO, PAGINA_INICIAL e DESCRICAO_ORGAO;
@@ -12,7 +11,6 @@ Alternativa a versão do MPOG [sei-vagrant](https://softwarepublico.gov.br/gitla
 - [ ] Clean code na imagem do apache/php;
 - [ ] Criar README.md pra imagem do apache/php;
 - [ ] Verificar a possibilidade de criar variáveis de ambiente para atualizarem os arquivos de configuração do SEI/SIP através do docker-compose ou dockerfile;
-```
 
 ## Como contribuir
 
