@@ -1,5 +1,15 @@
 version: '2'
 services:
+        jodconverter:
+                build: jodconverter
+                restart: always
+                ports:
+                        - 8080:8080       
+
+        memcache:
+                build: memcache
+                restart: always
+                
         mysql:
                 build: mysql
                 restart: always
