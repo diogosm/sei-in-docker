@@ -1,12 +1,11 @@
+# @TODO:
+#	Usar imagem apache+php5.6
 FROM ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 
-#RUN apt-get -y dist-upgrade
-#RUN apt-get install -y -f build-essential
-#RUN apt-get -f -y install libcurl3-gnutls python-pycurl python-software-properties
 RUN apt-get -y install software-properties-common
 RUN apt-get -y install language-pack-en
 
