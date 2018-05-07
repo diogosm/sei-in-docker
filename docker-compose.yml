@@ -36,3 +36,5 @@ services:
                         - mysql:mysql
                         - jodconverter:jod
                         - memcache:memcache
+                environment:
+                        - SEI_URL=http://localhost
