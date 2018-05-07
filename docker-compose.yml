@@ -19,12 +19,20 @@ services:
                         - 3306:3306
                 volumes:
                         - /opt/volumes/mysql:/var/lib/mysql
-        solr:
-                build: solr
+                          #        solr:
+                          #                build: solr
+                          #                restart: always
+                          #                ports:
+                          #                        - 8983:8983
+                          #                entrypoint:
+                          #                        - solr-precreate
+                          #                        - sei-protocolos
+        sei_docker:
+                build: sei_docker
                 restart: always
                 ports:
-                        - 8983:8983
-                entrypoint:
-                        - solr-precreate
-                        - sei-protocolos
- 
+                        - 80:80
+                links:
+                        - mysql:mysql
+                        - jodconverter:jod
+                        - memcache:memcache
